@@ -1,0 +1,19 @@
+﻿@model WebApplication1.Models.ProductViewModel
+@{
+    ViewBag.Title = "Home Page";  
+}
+
+<div class="hero-unit">
+    <h1>Agentstuff product</h1>
+</div>
+<div class="row">
+        <div class="span4">
+            <h2>@Model.Name</h2>
+            <p>
+                <img src="@Model.Image"/> 
+
+            </p>
+            <p>@Model.Description</p>
+            <p><a class="btn" href="">Get it! &raquo;</a></p>
+        </div>
+</div>

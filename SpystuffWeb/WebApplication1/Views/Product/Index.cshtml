@@ -1,0 +1,22 @@
+﻿@model WebApplication1.Models.ProductListingViewModel
+@{
+    ViewBag.Title = "Home Page";  
+}
+
+<div class="hero-unit">
+    <h1>Agentstuff products</h1>
+</div>
+<div class="row">
+    @foreach(var product in Model.Products)
+    {
+        <div class="span4">
+            <h2>@Html.ActionLink(product.Name, "Info", new { product.ArticleNr })</h2>
+            <p>
+                <img src="@product.Image"/> 
+
+            </p>
+            <p>@product.Description</p>
+            <p><a class="btn" href="">Get it! &raquo;</a></p>
+        </div>
+    }
+</div>
